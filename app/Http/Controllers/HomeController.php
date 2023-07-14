@@ -24,14 +24,14 @@ class HomeController extends Controller
 
     function bannerData(Request $request){
 
-        $data =  DB::table('banners')->get();
+        $data =  DB::table('banners')->first();
         return view('components.banner',['banner'=>$data]);
         
     }
 
     function intoData(Request $request){
 
-        $data =  DB::table('introductions')->get();
+        $data =  DB::table('introductions')->first();
         return view('components.intro',['intro' => $data]);
         
     }
